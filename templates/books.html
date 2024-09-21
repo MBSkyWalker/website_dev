@@ -1,0 +1,24 @@
+{% extends 'main.html' %} 
+
+{% block title %} Books {% endblock %}
+
+{% block second_title %} <p class="title" id="second_title"> Книги КЖ</p> {% endblock %}
+{% block content %}
+<div class="books_cont">
+<div class="slider2">
+    <button class="prev" onclick="prevImage2()">&#10094;</button>
+    <a href="https://lira-k.com.ua/news/maksim-bilousenko-psiholog-avtor-knigi-dolayuchi-shabloni-trivozhnosti" target="_blank"><img id="slider-image2" src="static\book1\Книга 1 Обкл.jpg" alt="Slider Image" ></a>
+    
+    <button class="next" onclick="nextImage2()">&#10095;</button>
+  </div>
+
+
+  <div class="slider3">
+    <button class="prev" onclick="prevImage3()">&#10094;</button>
+    <a href="https://lira-k.com.ua/products/konstruktivne-zhittya--pidtrimka-psihichnogo-zdorovya-i-zhittevij-shlyah" target="_blank"><img id="slider-image3" src="static\book2\Книга 2 Обкл.jpg" alt="Slider Image"></a>
+    
+    <button class="next" onclick="nextImage3()">&#10095;</button>
+  </div>
+
+</div>
+{% endblock %}

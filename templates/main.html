@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Конструктивне життя{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+    <header>
+        
+          <a href="/"> <div class="logo_cont"> <img src="static\authors\logo2.svg" class="logo"  alt="logo"></div></a>
+            <div class="title" id="hd"><span class="centered_title"> Програма</span> Конструктивне Життя-Україна
+                </div>
+
+           <!-- <li class="link_list">
+            <ul class="hlink"><a href="/">About</a></ul>
+            <ul class="hlink"> <a href="/"> Home</a></ul>
+            <ul class="hlink"> <a href="/">Contact</a><ul>
+           </li> -->
+
+           
+        
+        <div class="cont_slider">
+        <div class="slider">
+            <button class="prev" onclick="prevImage()">&#10094;</button>
+            <img id="slider-image" src="static\authors\author1.jpg" alt="Slider Image" width="150" height="130" >
+            
+            <button class="next" onclick="nextImage()">&#10095;</button>
+          </div>
+          <div id="photo_desc" class="title">Японські психотерапії для України</div>
+    </div>
+    
+    </header>
+    
+    
+    
+    <div class="wrapper">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            
+            <a href="/neurotic-suffering">Невротичні страждання</a>
+            <a href="/myths-and-alternatives">Міфи та альтернативи психолотерапії</a>
+            <a href="/cl-cognitive-behavior">Конструктивне Життя і когнітивно-поведінкова терапія </a>
+            <a href="#">Посилання 5</a>
+            <a href="#">Посилання 6</a>
+            <a href="#">Посилання 7</a>
+            <a href="#">Посилання 8</a>
+            <a href="/about">About</a>
+        </div>
+        
+            
+
+
+
+
+
+
+
+        </main>
+        <table>
+            <tr>
+                <td><a href="/" class="main_link">Головна</a></td>
+                <td><a href="/books" class="main_link" >Книги КЖ</a></td>
+                <td><a href="/const-life-act" class="main_link">КЖ-активність</a></td>
+                <td><a href="/const-life-reciprocity" class="main_link">КЖ-взаємність</a></td>
+                <td><a href="/emotions" class="main_link">Емоції</a></td>
+                <td><a href="/study" class="main_link">Навчання</a></td>
+                <td><div id="main">
+                    <button class="openbtn" onclick="openNav()">Більше</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+         <a href="#hd"><img src="static\arrow.svg" alt="arrow" id="arrow"></a>
+           {% block second_title %} <p class="title" id="second_title">Про програму Конструктивне Життя</p>{% endblock %}
+            <div class="secline"></div>
+        
+        {% block content %}
+        <div class="main_cont">
+            
+            <div class="main_text">
+        <span class="bold_text">Головна Програма «Конструктивне Життя» [Constructive Living] </span>
+        – це програма керування власним життям (менеджмент власного життя), яка вчить нас
+         <span class="bold_text"> прийняттю реальності такою, яка вона є через прийняття всіх
+             своїх почуттів такими, які вони є.</span>
+          Вона інтегрує в собі два підходи, які походять з японських психотерапій: з терапії 
+          психіатра, психолога, гуманіста <span  class="show_photo" id="morita_text" >Шьоми Моріти</span><img src="static\authors\author1.jpg" alt="morita" id="morita_photo" class="popup_photo"> (1874-1938) і терапії Найкан підприємця,
+           колишнього буддистського ченця <span class="show_photo" onclick="ShowPhoto('yosimoto_photo')"  id="yosimoto_text"> Ісіна Йосімото</span><img src="static\authors\author3.jpg" alt="yosimoto" id="yosimoto_photo" class="popup_photo"> (1916-1988). Вона розроблена на початку
+            1980-х рр. американським антропологом, психологом, професором <span class="show_photo" onclick="ShowPhoto('reinolds_photo')" id="reinolds_text">Девідом Кентом Рейнольдсом</span><img src="static\authors\author2.jpg" alt="reinolds" id="reinolds_photo" class="popup_photo">
+             і є повністю адаптованою для західної, у т.ч. української аудиторії. Перша частина,
+              <span class="bold_text"><a href="/const-life-act" class="inner_ref"> Конструктивне Життя-активність</a></span>,
+               яка походить від терапії Моріти, присвячена подоланню наших невротичних схильностей і моментів у житті. Опановуючи
+                навичку не фокусуватися, не боротися зі своїми емоціями, приймати їх всі, такими, як вони є, людина фокусується на
+                 своїх цілях і діях, які ведуть до їх реалізації. Ми відмовляємось від пошуку постійного емоційного комфорту, приймаємо
+                  те, що в житті наші почуття змінюються, що вони непостійні і доволі часто бувають дискомфортними, але ми можемо бути 
+                  часто активними у досягненні важливих  цілей з певною долею емоційного дискомфорту і це нормально. 
+
+
+        <div class="secline"></div>
+        <p>Друга частина програми,
+            <span class="bold_text"><a href="/const-life-reciprocity" class="inner_ref"> Конструктивне Життя – взаємність</a></span>  або <span class="bold_text">КЖ</span>-рефлексія
+            , яка походить від системи Найкан І.Йосімото, – це практика усвідомлення нашої
+             взаємозалежності від інших людей, речей, природи і одночасно практика вдячності.
+              Ми змінюємо перспективу погляду на наших батьків, колег, керівників, друзів.
+               Замість того щоб фокусуватися на їх помилках, болючих результатах взаємодії 
+               з нами, ми починаємо бачити їх вклад, іноді несвідомий, але дуже конкретний,
+                в наше життя. Ми бачимо як нам допомагали в опануванні навіть самих базових 
+                людських здібностей: мови, мислення, писемності. Ми також вчимось бачити допомогу
+                 у житті наших мобільних телефонів, комп’ютерів, унітазів з бачками, води, газу, 
+                 тепла і тих, хто їх виробляє. Потроху ми починаємо усвідомлювати, що ніколи не 
+                 буваємо самотніми, про нас хтось постійно дбає. Розуміння цього приводить до розсіювання
+                  невротичного почуття самотності, бо як ми можемо бути самотніми, коли мільйони рук кожну
+                   мить підтримують нас?
+        </p>     
+
+
+            <div class="secline"></div>
+            <p>
+                <span class="bold_text"> Програма Конструктивне Життя</span> – <span class="italic_text"> це системний розвиток і
+                 укріплення нашого характеру</span>, якого так потребує час війни. Війна поставила сурові запитання
+                  до нашої емоційної, розумової стійкості. Що може бути кращім для укріплення себе, ніж 
+                  програма, яка з самого початку пропонує прийняти всі наші почуття, думки, образи, спогади,
+                   тілесні прояви як природні, не боротися з ними, а слухати реальність і діяти у відповідності
+                    до її завдань і наших глибинних цінностей і цілей? Тривожність, страх, паніка, сум, шкода,
+                     провина, сором, прискорене серцебиття, пітні долоні, безсоння, важкі спогади – все це не 
+                     «негативні» почуття і стани, не симптоми «розладів», а цілком природні прояви нашої особистості
+                      в певних обставинах. Ми всі маємо відчувати їх і відчуваємо з тією чи іншою частотою під час
+                       війни і будь-яких значних стресових ситуацій. Будь яка спроба модифікувати їх, заглушити, 
+                       видалити з себе призводить тільки до їх підсилення. Прийняття всього, що ми відчуваємо без
+                        змін, прислуховування до своїх почуттів – про що вони нам кажуть? – і активні дії в існуючих
+                         ситуаціях з реалізації наших цілей є набагато кращою стратегією поведінки в будь яких стресових умовах. 
+                
+                
+                </p>
+
+                <div class="secline"></div>
+                <p>Серфінг по цьому сайту надасть Вам можливість познайомитися з основами програми підсилення вашого характеру,
+                    
+                    стресостійкості під час війни, <span class="bold_text"> Конструктивне Життя</span>. Якщо вона Вас зацікавить, Ви зможете знайти посилання на
+                     україномовні книжки, які стануть Вашими посібниками по самонавчанню. Якщо Вам більше підійде робота з тренером,
+                      то Ви зможете знайти інформацію і контакти сертифікованого тренера з <span class="bold_text"> Конструктивного Життя</span>, клінічного психолога
+                       <span class="bold_text"> <a href="https://www.instagram.com/psy.bilousenko/" target="_blank" class="inner_ref"> Максима Білоусенка</a></span>, який допоможе Вам опанувати цю нескладну систему і стати більш реалістичними, емоційно-тверезими
+                        і стійкими у цьому непростому і не дуже довгому житті. </p>
+        
+            </div>
+            
+        </div>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close-popup" onclick="ClosePopup()">&times;</span>
+                <p> Психологічна допомога<br>+380978502191 </p>
+            </div>
+        </div>
+        {% endblock %}
+       
+    
+    <footer>
+        <!-- <a href="#"> <img src="static/instimg.png" alt="inst" width="20px" height="20px"></a> -->
+         <div class="footer_main_cont">
+            <ul>
+                <li><a href="#" class="inner_ref">Корисне посилання1</a> </li>
+                <li><a href="#" class="inner_ref">Корисне посилання2</a></li>
+                <li><a href="#" class="inner_ref">Корисне посилання3</a></li>
+            </ul>
+            
+         </div>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+    
+</body>
+</html>

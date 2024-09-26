@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block title %} КЖ і депресія{% endblock %}
+
+{% block second_title %} <p class="title" id="second_title"> Конструктивне життя і депресія</p> {% endblock %}
+
+{% block content %}
+<div class="main_cont">
+    <div class="main_text">
+        {% for paragraph in text.split('\n') %}
+        <p> {{ paragraph }}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

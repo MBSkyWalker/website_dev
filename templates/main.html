@@ -7,12 +7,13 @@
     <title>{% block title %}Конструктивне життя{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <link rel="icon" type="image/x-icon" href="static/authors/logo2.svg">
 </head>
 <body>
     <header>
         
           <a href="/"> <div class="logo_cont"> <img src="static\authors\logo2.svg" class="logo"  alt="logo"></div></a>
-            <div class="title" id="hd"><span class="centered_title"> Програма</span> Конструктивне Життя-Україна
+            <div class="title" id="hd"><div class="centered_title"> Програма</div> <div>Конструктивне Життя-Україна</div>
                 </div>
 
            <!-- <li class="link_list">
@@ -44,11 +45,13 @@
             <a href="/neurotic-suffering">Невротичні страждання</a>
             <a href="/myths-and-alternatives">Міфи та альтернативи психолотерапії</a>
             <a href="/cl-cognitive-behavior">Конструктивне Життя і когнітивно-поведінкова терапія </a>
-            <a href="#">Посилання 5</a>
-            <a href="#">Посилання 6</a>
-            <a href="#">Посилання 7</a>
-            <a href="#">Посилання 8</a>
-            <a href="/about">About</a>
+            <a href="/brasil-article">Стаття з бразильського журналу</a>
+            <a href="/cl-for-office-and-business">КЖ для офісу і бізнесу</a>
+            <a href="/cl-and-family-reletionships"> КЖ і сімейні взаємини</a>
+            <a href="/cl-and-depression">КЖ і депресія</a>
+            <a href="/yosimoto">Йосімото</a>
+            <a href="/reinolds">Д. Реінольдс</a>
+            <a href="/morita">Шьома Моріта</a>
         </div>
         
             
@@ -60,7 +63,7 @@
 
 
         </main>
-        <table>
+        <table class="link_table">
             <tr>
                 <td><a href="/" class="main_link">Головна</a></td>
                 <td><a href="/books" class="main_link" >Книги КЖ</a></td>

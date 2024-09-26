@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     background-color: #96d386;
-    line-height: 2rem;
+    
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     animation: slideIn 0.5s ease-out;
     
@@ -109,6 +109,7 @@ header {
 .main_cont{
     display: flex;
     flex-direction: column;
+    line-height: 1.9em;
 
 }
 
@@ -165,7 +166,7 @@ header {
 
 #hd{
     font-size: xx-large;
-    margin: 0;
+    
     line-height: 3rem;
     margin-right: 7%;
     display: flex;
@@ -236,7 +237,7 @@ td {
     
     background-color: lightgreen;
     text-align: center;
-    transition: 0.5s;
+    transition-duration: 1s;
 }
 
 
@@ -271,7 +272,7 @@ td:hover{
 
 
 #arrow{
-    width: 10%;
+    
     height: 8%;
     position: fixed; /* Фіксує кнопку на одному місці */
     bottom: 20px;
@@ -319,59 +320,77 @@ ul{
     color: #a2d509;
 }
 
-.slider2 img{
-     
-    width: 30rem;
-    height: 40rem;
-    
+/* Основні стилі для слайдерів і контейнера */
+.slider2 img, .slider3 img {
+    width: 100%;
+    height: auto; /* Адаптивна висота для підтримки пропорцій зображень */
+    max-width: 30rem; /* Максимальний розмір на великих екранах */
+    max-height: 40rem; /* Максимальний розмір на великих екранах */
 }
 
-.slider2{
+.slider2, .slider3 {
     display: flex;
     align-items: center;
+    justify-content: center; /* Центрування елементів */
     overflow: hidden;
-
 }
 
-.slider2 button{
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100%;
+.slider2 button, .slider3 button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
     background-color: #2eb10d;
-    
+    font-size: 1.5rem;
 }
 
-.books_cont{
-    height: fit-content;
+/* Стилі для контейнера */
+.books_cont {
     width: 100%;
     background-color: #90ee90;
     display: flex;
+    flex-wrap: wrap; /* Елементи будуть переноситися на наступний рядок на малих екранах */
     justify-content: space-between;
+    gap: 20px;
 }
 
+/* Адаптивні стилі для планшетів */
+@media only screen and (max-width: 768px) {
+    .slider2 img, .slider3 img {
+        max-width: 20rem; /* Зменшити розмір для планшетів */
+        max-height: 30rem;
+    }
 
-.slider3 img{
-     
-    width: 30rem;
-    height: 40rem;
+    .slider2 button, .slider3 button {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .books_cont {
+        flex-direction: column; /* Вертикальне вирівнювання для планшетів */
+        align-items: center;
+    }
 }
 
-.slider3{
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    
-    
+/* Адаптивні стилі для мобільних пристроїв */
+@media only screen and (max-width: 480px) {
+    .slider2 img, .slider3 img {
+        max-width: 15rem; /* Зменшення для смартфонів */
+        max-height: 20rem;
+    }
 
+    .slider2 button, .slider3 button {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .books_cont {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.slider3 button{
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100%;
-    background-color: #2eb10d;
-    
-}
 
 #special_desc{
     padding: 20px;
@@ -508,6 +527,7 @@ ul{
     border-radius: 8px;
     transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition-duration: 1s;
 }
 
 /* Анімації та ефекти при наведенні */
@@ -517,48 +537,82 @@ ul{
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Медіа-запит для менших екранів */
-@media screen and (max-width: 768px) {
-    .table1 td {
-        padding: 8px; /* Менший відступ для менших екранів */
-        font-size: 14px; /* Зменшення шрифта */
+@media only screen and (max-width: 600px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo_cont img {
+      width: 80px; /* Зменшуємо розмір логотипу */
+      height: 80px;
+    }
+  
+    .title {
+      font-size: 1.2em; /* Зменшуємо розмір шрифту */
+      text-align: center;
+    }
+  
+    .cont_slider {
+      width: 100%; /* Ширина слайдера 100% */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .slider img {
+      width: 100px; /* Зменшуємо зображення слайдера */
+      height: 90px;
+    }
+  
+    .slider button {
+      font-size: 1.5em; /* Зменшуємо кнопки */
+    }
+  
+    #photo_desc {
+      font-size: 1em; /* Зменшуємо підпис до фото */
+      text-align: center;
+    }
+    .link_table{
+        display: block;
+        overflow-x: scroll;
+    }
+    .main_link{
+        font-size: 12px;
+    }
+    #popup{
+        width: 150px;
+        height: 100px;
+        font-size: smaller;
     }
     
-    /* Горизонтальна прокрутка для дуже вузьких екранів */
-    .table1 {
-        display: block;
-        overflow-x: scroll; /* Вмикаємо горизонтальну прокрутку */
+  }
+  
+td{
+    padding: 10px;
+}
+@media only screen and (max-width: 890px) {
+    .link_table{
+        display: flex;
+        overflow-x: scroll;
+    }
+    #slider-image{
+        width: 100px;
+        height: 90px;
+
     }
 
-    /* Додатковий медіа-запит для ще менших екранів */
-    @media screen and (max-width: 480px) {
-        .table1 td {
-            padding: 6px;
-            font-size: 12px;
-        }
+    #photo_desc{
+        font-size: 10px;
+
+    }
+    #hd{
+        font-size: large;
     }
 }
 
-@media screen and (max-width: 768px) {
-    table td {
-        padding: 8px; /* Менший відступ для менших екранів */
-        font-size: 14px; /* Зменшення шрифта */
-    }
-    
-    /* Горизонтальна прокрутка для дуже вузьких екранів */
-    table {
-        display: block;
-        overflow-x: scroll; /* Вмикаємо горизонтальну прокрутку */
-    }
 
-    /* Додатковий медіа-запит для ще менших екранів */
-    @media screen and (max-width: 480px) {
-        table td {
-            padding: 6px;
-            font-size: 12px;
-        }
-    }
-}
 
 
 

@@ -63,3 +63,50 @@ def cl_cog_beh():
         text2 = file2.read()
         
         return render_template('cognitive_behavior.html', text2=text2, text1=text1)
+    
+@app.route('/brasil-article')
+def brasil_article():
+    with open('text/brasil_article.txt', 'r', encoding='utf-8') as file:
+        text = file.read()
+        return render_template('brasil_article.html', text=text)
+    
+@app.route('/cl-for-office-and-business')
+def cl_for_office_and_business():
+    with open('text\cl_for_office_and_business.txt', 'r', encoding='utf-8') as file:
+        text = file.read()
+        return render_template('cl_for_office_and_business.html', text=text)
+    
+
+
+@app.route('/cl-and-family-reletionships')
+def cl_and_family_reletionships():
+    with open('text\cl_and_family_reletionships.txt', 'r', encoding='utf-8') as file:
+        text = file.read()
+        return render_template('cl_and_family_reletionships.html', text=text)
+    
+@app.route('/cl-and-depression')
+def cl_and_depression():
+    with open('text\cl_and_depression.txt', 'r', encoding='utf-8') as file:
+        text = file.read()
+        return render_template('cl_and_depression.html', text=text)
+    
+
+@app.route('/yosimoto')
+def yosimoto():
+    with open('text\yosimoto.txt', 'r', encoding='utf-8') as file:
+        text = file.read()
+        return render_template('yosimoto.html', text=text)
+    
+@app.route('/reinolds')
+def reinolds():
+    with open('text/reinolds.txt', 'r', encoding='utf-8') as file:
+        text = file.read()
+        return render_template('reinolds.html', text=text)
+    
+@app.route('/morita')
+def morita():
+    with open('text\morita.txt', 'r', encoding='utf-8') as file:
+        text = file.read()
+        return render_template('morita.html', text=text)
+    
+

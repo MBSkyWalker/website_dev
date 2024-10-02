@@ -110,3 +110,9 @@ def morita():
         return render_template('morita.html', text=text)
     
 
+@app.route('/psycho-health')
+def psycho_health():
+    with open('text\psycho_health.txt', 'r', encoding='utf-8') as file:
+        text = file.read()
+        return render_template('psycho_health.html', text=text)
+

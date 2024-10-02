@@ -2,22 +2,33 @@ html, body {
     height: 100%;
     margin: 0;
     background-color: #96d386;
-    
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     animation: slideIn 0.5s ease-out;
-    
+
 }
 
 
+#dev{
+    color: #f1f1f1;
 
+}
 
+.footer_main_cont li{
+    display:flex;
+    padding-top:20px;
+}
+.ref_icon{
+    width:20px;
+    padding-right:15px;
+}
 
 
 .wrapper {
 
     min-height: 100vh; /* 100% від висоти вікна браузера */
 
-    
+
     background-color: #f9fafa;;
     width: 100%;
     overflow: hidden
@@ -40,7 +51,7 @@ header {
     align-items: center;
     display: flex;
     flex-direction: row;
-    
+
     font-size: larger;
     justify-content: space-between;
     padding: 30px;
@@ -51,14 +62,14 @@ header {
     width: 100%;
     height: 2px;
     background-color: #39a91b;
-    
+
 }
 
 .link_list{
     display: flex;
     flex-direction: row;
     margin-left: 50%;
-    
+
 }
 
 .logo{
@@ -78,7 +89,7 @@ header {
     background: #96d386;
     border: none;
     border-radius: 5px;
-    
+
     height: 30px;
 }
 
@@ -97,13 +108,13 @@ header {
     font-size: larger;
     color: #39a91b;
     margin-left: 5%;
-    
+
 
 }
 
 .main_text{
     padding: 20px;
-    
+
 }
 
 .main_cont{
@@ -117,7 +128,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+
 }
 
 
@@ -166,7 +177,7 @@ header {
 
 #hd{
     font-size: xx-large;
-    
+
     line-height: 3rem;
     margin-right: 7%;
     text-align: center;
@@ -186,7 +197,7 @@ header {
 #second_title{
     font-style: italic;
     font-size: 1.5rem;
-    
+
 }
 
 .sidebar {
@@ -198,17 +209,18 @@ header {
     right: 0;
     background-color: #90ee90;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.4s;
     padding-top: 60px;
 }
 
 .sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #60a91b;
     display: block;
-    transition: 0.3s;
+
+
 }
 
 .sidebar a:hover {
@@ -224,16 +236,16 @@ header {
 }
 
 #main {
-    transition: margin-left  ease 2s;
+    transition: margin-left  ease 0.3s;
     padding: 16px;
-    
+
 }
 table {
     width: 100%;
     border-collapse: collapse;
 }
 td {
-    
+
     background-color: lightgreen;
     text-align: center;
     transition-duration: 1s;
@@ -242,13 +254,13 @@ td {
 
 .main_link{
 
-    
+
     text-decoration: none;
     font-size: 25px;
     color: #39a91b;
     display: block;
     transition: 0.3s;
-    
+
 }
 
 .main_link:hover{
@@ -271,23 +283,23 @@ td:hover{
 
 
 #arrow{
-    
+
     height: 8%;
     position: fixed; /* Фіксує кнопку на одному місці */
     bottom: 20px;
     right: 10px;
     cursor: pointer;
     padding: 0; /* Знімаємо відступи від країв кнопки */
-    
+
     cursor: pointer;
 }
 
 ul{
     display: flex;
     flex-direction: column;
-   
+
     list-style-type: none;
-    
+
 }
 
 #footer_link{
@@ -298,7 +310,7 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+
 }
 
 
@@ -309,7 +321,7 @@ ul{
 
 .inner_ref{
     color: #257f11;
-   
+
 }
 
 .italic_text{
@@ -339,7 +351,7 @@ ul{
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    
+
     font-size: 1.5rem;
 }
 
@@ -376,12 +388,12 @@ ul{
         flex-direction: column
     }
     .book_wrapper{
-        max-width: 49%; 
+        max-width: 49%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        
-        
+
+
     }
     .book_text{
         font-size: 13px;
@@ -389,6 +401,7 @@ ul{
     footer{
         font-size: 13px;
     }
+
 }
 
 /* Адаптивні стилі для мобільних пристроїв */
@@ -412,12 +425,13 @@ ul{
     footer{
         font-size: 10px;
     }
+
 }
 
 
 #special_desc{
     padding: 20px;
-    
+
     border-left: 4px solid lightgreen;
     /* margin-left: 30px; */
     margin-right: 30px;
@@ -472,7 +486,7 @@ ul{
     box-shadow: none;
     animation: pulse 2s infinite;
 }
-  
+
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -494,7 +508,7 @@ ul{
   from { transform: translateY(-50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
-  
+
   /* Стилі для кнопки закриття */
   .close-popup {
     position: absolute;
@@ -505,7 +519,7 @@ ul{
     font-weight: bold;
     cursor: pointer;
   }
-  
+
   .close-popup:hover {
     color: red; /* Зміна кольору при наведенні */
   }
@@ -514,7 +528,7 @@ ul{
     cursor: pointer;
     color:#60a91b;
   }
-  
+
 
 
 
@@ -531,26 +545,27 @@ ul{
     position: absolute;
     left: calc(50% - 200px);
     right: calc(50% - 200px);
-    
+
 }
 
 .table1 {
     font-family: 'Arial', sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    display: flex;
     margin: 20px auto;
     max-width: 100%; /* Зробимо таблицю адаптивною до ширини */
-    overflow-x: auto; /* Додаємо горизонтальну прокрутку для маленьких екранів */
+    overflow-x: scroll; /* Додаємо горизонтальну прокрутку для маленьких екранів */
 }
 
 .table1 td {
     border: 2px solid rgb(0, 150, 42);
-    padding: 10px;
-    text-align: left;
+    padding: 2px;
+
     border-radius: 8px;
     transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition-duration: 1s;
+
+
 }
 
 /* Анімації та ефекти при наведенні */
@@ -566,33 +581,33 @@ ul{
       flex-direction: column;
       align-items: center;
     }
-  
+
     .logo_cont img {
       width: 80px; /* Зменшуємо розмір логотипу */
       height: 80px;
     }
-  
+
     .title {
       font-size: 1.2em; /* Зменшуємо розмір шрифту */
       text-align: center;
     }
-  
+
     .cont_slider {
       width: 100%; /* Ширина слайдера 100% */
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-  
+
     .slider img {
       width: 100px; /* Зменшуємо зображення слайдера */
       height: 90px;
     }
-  
+
     .slider button {
       font-size: 1.5em; /* Зменшуємо кнопки */
     }
-  
+
     #photo_desc {
       font-size: 1em; /* Зменшуємо підпис до фото */
       text-align: center;
@@ -608,10 +623,12 @@ ul{
         width: 150px;
         height: 100px;
         font-size: smaller;
+    .table1{
+        font-size:10px;
     }
-    
-  }
-  
+
+}
+
 td{
     padding: 10px;
 }
@@ -633,7 +650,7 @@ td{
     #hd{
         font-size: large;
     }
-}
+
 
 
 
@@ -661,16 +678,16 @@ td{
     padding-top: 15px;
 }
 
-#dev{
-    color: #f1f1f1;
-}
 
 .ref_icon{
     width: 15px;
     padding-right: 10px;
-    
-}
 
+}
+}
 .footer_main_cont li{
     display: flex;
 }
+
+
+
